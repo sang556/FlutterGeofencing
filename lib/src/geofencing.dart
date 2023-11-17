@@ -145,7 +145,8 @@ class GeofencingManager {
       PluginUtilities.getCallbackHandle(callback).toRawHandle()
     ];
     args.addAll(region._toArgs());
-    await _channel.invokeMethod('GeofencingPlugin.registerGeofence', args);
+    var result = await _channel.invokeMethod('GeofencingPlugin.registerGeofence', args);
+    print("-----method channel msg: $result");
   }
 
   /// get all geofence identifiers

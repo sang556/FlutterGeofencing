@@ -244,6 +244,7 @@ static BOOL backgroundIsolateRun = NO;
 - (void)setRegionCallbackMapping:(NSMutableDictionary *)mapping {
   const NSString *key = kCallbackMapping;
   NSAssert(mapping != nil, @"mapping cannot be nil");
+  NSLog(@"------------setRegionCallbackMapping: %s", key);
   [_persistentState setObject:mapping forKey:key];
 }
 
